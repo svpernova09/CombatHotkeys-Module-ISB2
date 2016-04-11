@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="eabfee76-6694-43d0-a8b9-3845671c48ca" DisplayName="Combat Hotkeys">
+  <Description>Pro System for ISBoxer 2</Description>
+  <Version>0.0.1</Version>
+  <ModuleTargets />
+  <ModuleGenres>MMORPG</ModuleGenres>
+  <Games>
+    <guid>6d647be5-7cfa-41e1-b5dd-a04c45c1eef9</guid>
+  </Games>
+  <Procedure Guid="8a0c122b-b383-4235-841a-08dd98bd68ff" DisplayName="Slots to Call DPS Rotation">
+    <ParameterDefinitions>
+      <ParameterDefinition ParameterType="Target" DisplayName="Target" DefaultValue="[[TargetGroup:DPS]]" />
+    </ParameterDefinitions>
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
+        <Parameter Value="[[Procedure:Call DPS Rotation]]" />
+        <Children />
+        <Branches />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="1d678211-a387-456a-be54-64d46bdb6227" DisplayName="Call DPS Rotation">
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:DPS Rotation]]" />
+        <Children />
+        <Branches />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Hotkey Guid="433e4e2a-42a7-4b99-9305-a994ab79079b" DisplayName="DPS Rotation" Category="Combat" Global="false" Enable="true">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>8a0c122b-b383-4235-841a-08dd98bd68ff</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>8a0c122b-b383-4235-841a-08dd98bd68ff</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Parent>00000000-0000-0000-0000-000000000000</Parent>
+  <AuthorName>Svpernova09</AuthorName>
+  <AuthorEmail>halo09@gmail.com</AuthorEmail>
+  <AuthorBitcoinAddress>1EgqrwWyeSkRvKoozGWcZb1ymTD3K9kPep</AuthorBitcoinAddress>
+  <AuthorPayPalEmail>ha09lo@hotmail.com</AuthorPayPalEmail>
+</UserModule>
