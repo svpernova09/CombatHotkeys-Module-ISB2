@@ -8,6 +8,7 @@
     <guid>6d647be5-7cfa-41e1-b5dd-a04c45c1eef9</guid>
   </Games>
   <Procedure Guid="8a0c122b-b383-4235-841a-08dd98bd68ff" DisplayName="Slots to Call DPS Rotation">
+    <Notes>[[Procedure:Call DPS Rotation]] -&gt; [[Parameter:1]] -&gt; [[TargetGroup:DPS]]</Notes>
     <ParameterDefinitions>
       <ParameterDefinition ParameterType="Target" DisplayName="Target" DefaultValue="[[TargetGroup:DPS]]" />
     </ParameterDefinitions>
@@ -24,12 +25,256 @@
     </StepCounter>
   </Procedure>
   <Procedure Guid="1d678211-a387-456a-be54-64d46bdb6227" DisplayName="Call DPS Rotation">
+    <Notes>[[Procedure: DPS Rotation]] -&gt; Window:Current</Notes>
     <ParameterDefinitions />
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:DPS Rotation]]" />
         <Children />
         <Branches />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="2b2a08b1-6127-40f5-99f5-563c68947717" DisplayName="Slots to Call AOE DPS Rotation">
+    <Notes>[[Procedure:Call AOE DPS Rotation]] -&gt; [[Parameter:1]] -&gt; [[TargetGroup:DPS]]</Notes>
+    <ParameterDefinitions>
+      <ParameterDefinition ParameterType="Target" DisplayName="Target" Description="" DefaultValue="[[TargetGroup:DPS]]" />
+    </ParameterDefinitions>
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
+        <Parameter Value="[[Procedure:Call AOE DPS Rotation]]" />
+        <Parameter Value="" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="fe542db7-7165-4a96-a636-06b46294f19a" DisplayName="Call AOE DPS Rotation">
+    <Notes>[[Procedure:AOE DPS Rotation]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:AOE DPS Rotation]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="fabcc2a8-ea40-44b4-84c0-674344250c08" DisplayName="Slots to Call PVP DPS Rotation">
+    <Notes>[[Procedure:Call PVP DPS Rotation]] -&gt; [[Parameter:1]] -&gt; [[TargetGroup:DPS]]</Notes>
+    <ParameterDefinitions>
+      <ParameterDefinition ParameterType="Target" DisplayName="Target" DefaultValue="[[TargetGroup:DPS]]" />
+    </ParameterDefinitions>
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
+        <Parameter Value="[[Procedure:Call PVP DPS Rotation]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="80385e2d-001d-4fb6-a42b-18b08c55f5e7" DisplayName="PVP DPS Rotation">
+    <Notes>[[Procedure:PVP DPS Rotation]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:PVP DPS Rotation]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="af0a2064-2a9c-4652-bdf0-fd731c9e1475" DisplayName="Slots to Call Activate Proc">
+    <Notes>[[Procedure:Call Activate Proc]] -&gt; [[Parameter:1]] -&gt; [[TargetGroup:DPS]]</Notes>
+    <ParameterDefinitions>
+      <ParameterDefinition ParameterType="Target" DisplayName="Target" DefaultValue="[[TargetGroup:DPS]]" />
+    </ParameterDefinitions>
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
+        <Parameter Value="[[Procedure:Call Activate Proc]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="f35daf16-1bf7-4977-a9f2-43509de1f719" DisplayName="Activate Proc">
+    <Notes>[[Procedure:Activate Proc]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Activate Proc]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="b4328aec-7abf-42b9-99ab-36c9c3f9a8ca" DisplayName="Slots to Call Interrupt">
+    <Notes>[[Procedure:Call Interrupt]] -&gt;TODO: Make sure this works as Round Robin</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Call Interrupt]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="4c0bda76-1444-482f-a5a4-aad81feedb15" DisplayName="Interrupt">
+    <Notes>[[Procedure:Interrupt]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Interrupt]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="5d6382bb-955c-4e7d-838d-d6b20bd0d4d7" DisplayName="Slots to Call Stun">
+    <Notes>[[Procedure:Call Stun]] -&gt;TODO: Make sure this works as Round Robin</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Call Stun]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="04ace8af-994b-4cd2-b8e3-fd0e37cc6a88" DisplayName="Stun">
+    <Notes>[[Procedure:Stun]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Stun]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="8e86386e-fe5a-4295-a076-976067783155" DisplayName="Slots to Call Ground AOE">
+    <Notes>[[Procedure:Ground AOE]] -&gt; [[Parameter:1]] -&gt; [[TargetGroup:DPS]]</Notes>
+    <ParameterDefinitions>
+      <ParameterDefinition ParameterType="Target" DisplayName="Target" DefaultValue="[[TargetGroup:DPS]]" />
+    </ParameterDefinitions>
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
+        <Parameter Value="[[Procedure:Ground AOE]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="bb11557a-380f-4fd2-ae0f-d79d391c05e8" DisplayName="Ground AOE">
+    <Notes>[[Procedure:Ground AOE]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Ground AOE]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="adcd227f-97ce-48a1-bd9d-0140a1e68b64" DisplayName="Slots to Call Cooldowns">
+    <Notes>[[Procedure:Call Cooldowns]] -&gt; Window Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Call Cooldowns]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="83470d3c-f742-4fca-8d2d-364a2b5a6a0a" DisplayName="Cooldowns">
+    <Notes>[[Procedure: Cooldowns]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure: Cooldowns]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="570feae9-4396-461c-a934-73a0e29e1952" DisplayName="Slots to Call Panic">
+    <Notes>[[Procedure:Call Panic]] -&gt; Window Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Call Panic]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="2d5f9ae1-de84-4973-b1c1-435f9757b5cf" DisplayName="Panic">
+    <Notes>[[Procedure: Panic]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure: Panic]] " />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="8512ccd6-43ad-4f15-9522-ff86acd383cd" DisplayName="Slots to Call Taunt">
+    <Notes>[[Procedure:Call Taunt]] -&gt; Window Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Call Taunt]]" />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="0c95c08e-246c-40fb-8af9-8ae45d2a6083" DisplayName="Taunt">
+    <Notes>[[Procedure: Taunt]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure: Taunt]]" />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -52,6 +297,166 @@
       <Parameters>
         <string>[[TargetGroup:DPS]]</string>
       </Parameters>
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="e6dd9377-31e7-4232-b2ce-d00f699ead04" DisplayName="AOE DPS Rotation" Category="Combat" Global="false" Enable="true">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>2b2a08b1-6127-40f5-99f5-563c68947717</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>2b2a08b1-6127-40f5-99f5-563c68947717</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="c32e411b-b844-474f-b666-d2e55723ce32" DisplayName="PVP DPS Rotation" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>fabcc2a8-ea40-44b4-84c0-674344250c08</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>fabcc2a8-ea40-44b4-84c0-674344250c08</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="96b3531f-ac04-4b25-92e6-299a8e19f994" DisplayName="PVP AOE DPS Rotation" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>2b2a08b1-6127-40f5-99f5-563c68947717</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>2b2a08b1-6127-40f5-99f5-563c68947717</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="9a4535b7-58be-4884-a825-ab5ae418b192" DisplayName="Activate Proc" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>af0a2064-2a9c-4652-bdf0-fd731c9e1475</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>af0a2064-2a9c-4652-bdf0-fd731c9e1475</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="8442a99b-2e0b-41fd-9fdc-e6102a263900" DisplayName="Interrupt" Category="Combat" Global="false" Enable="true">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>b4328aec-7abf-42b9-99ab-36c9c3f9a8ca</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>b4328aec-7abf-42b9-99ab-36c9c3f9a8ca</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="9ab08c2d-821b-4b9b-8dce-97023ce7e29d" DisplayName="Stun" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>5d6382bb-955c-4e7d-838d-d6b20bd0d4d7</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>5d6382bb-955c-4e7d-838d-d6b20bd0d4d7</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="b4f253c5-3d9c-4ba2-a9f0-82dde143a201" DisplayName="Ground AOE" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>8e86386e-fe5a-4295-a076-976067783155</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>8e86386e-fe5a-4295-a076-976067783155</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters>
+        <string>[[TargetGroup:DPS]]</string>
+      </Parameters>
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="1520189a-f449-49e6-b38e-50d5d5ac9bec" DisplayName="Cooldowns" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>adcd227f-97ce-48a1-bd9d-0140a1e68b64</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>adcd227f-97ce-48a1-bd9d-0140a1e68b64</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="806965d7-0745-4139-ab77-4d0024a3b621" DisplayName="Panic" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>570feae9-4396-461c-a934-73a0e29e1952</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>570feae9-4396-461c-a934-73a0e29e1952</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="cca931ff-4b22-40fd-984c-3930f9497a83" DisplayName="Taunt" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>8512ccd6-43ad-4f15-9522-ff86acd383cd</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>8512ccd6-43ad-4f15-9522-ff86acd383cd</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
       <OnPress>false</OnPress>
     </ReleaseAction>
   </Hotkey>
