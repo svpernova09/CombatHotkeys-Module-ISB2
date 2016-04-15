@@ -48,6 +48,8 @@
       <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
         <Parameter Value="[[Procedure:Call AOE DPS Rotation]]" />
         <Parameter Value="" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -61,6 +63,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:AOE DPS Rotation]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -76,6 +80,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
         <Parameter Value="[[Procedure:Call PVP DPS Rotation]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -89,6 +95,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:PVP DPS Rotation]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -104,6 +112,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
         <Parameter Value="[[Procedure:Call Activate Proc]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -117,6 +127,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Activate Proc]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -130,6 +142,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Call Interrupt]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -143,6 +157,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Interrupt]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -156,6 +172,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Call Stun]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -169,6 +187,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Stun]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -184,6 +204,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="[[Parameter:1]]">
         <Parameter Value="[[Procedure:Ground AOE]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -197,6 +219,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Ground AOE]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -210,6 +234,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Call Cooldowns]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -223,6 +249,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure: Cooldowns]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -236,6 +264,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Call Panic]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -249,6 +279,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure: Panic]] " />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -262,6 +294,8 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure:Call Taunt]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -275,6 +309,68 @@
     <OnPress>
       <Instruction Code="ProcedureCall" Target="self">
         <Parameter Value="[[Procedure: Taunt]]" />
+        <Children />
+        <Branches />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="6e5c0873-6b3b-4c18-9158-6365e9833b0d" DisplayName="Slots to Call Pull">
+    <Notes>[[Procedure:Call Pull]] -&gt; Window Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Call Pull]] " />
+        <Children />
+        <Branches />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="f01408f1-0fdf-4acc-9833-3124665490a3" DisplayName="Pull">
+    <Notes>[[Procedure: Pull]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure: Pull]]" />
+        <Children />
+        <Branches />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="5811dd5a-7cd4-4277-a1fb-1af360894b26" DisplayName="Slots to Call Buffs">
+    <Notes>[[Procedure:Call Buffs]] -&gt; Window Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure:Call Buffs]]" />
+        <Children />
+        <Branches />
+      </Instruction>
+    </OnPress>
+    <OnRelease />
+    <StepCounter>
+      <Steps />
+    </StepCounter>
+  </Procedure>
+  <Procedure Guid="bdb4de96-9770-4b37-aa0b-cab8d358f40d" DisplayName="Buffs">
+    <Notes>[[Procedure: Buffs]] -&gt; Window:Current</Notes>
+    <ParameterDefinitions />
+    <OnPress>
+      <Instruction Code="ProcedureCall" Target="self">
+        <Parameter Value="[[Procedure: Buffs]]" />
+        <Children />
+        <Branches />
       </Instruction>
     </OnPress>
     <OnRelease />
@@ -455,6 +551,34 @@
     </PressAction>
     <ReleaseAction xsi:type="ProcedureAction">
       <Procedure>8512ccd6-43ad-4f15-9522-ff86acd383cd</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="da878b67-ce3d-4904-8fee-d0ba763e15c3" DisplayName="Pull" Category="Combat" Global="false" Enable="false">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>6e5c0873-6b3b-4c18-9158-6365e9833b0d</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>6e5c0873-6b3b-4c18-9158-6365e9833b0d</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>false</OnPress>
+    </ReleaseAction>
+  </Hotkey>
+  <Hotkey Guid="2f846899-2f5b-4064-982f-c249b9e0836b" DisplayName="Buffs" Category="Combat" Global="false" Enable="true">
+    <PressAction xsi:type="ProcedureAction">
+      <Procedure>5811dd5a-7cd4-4277-a1fb-1af360894b26</Procedure>
+      <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
+      <Parameters />
+      <OnPress>true</OnPress>
+    </PressAction>
+    <ReleaseAction xsi:type="ProcedureAction">
+      <Procedure>5811dd5a-7cd4-4277-a1fb-1af360894b26</Procedure>
       <Module>eabfee76-6694-43d0-a8b9-3845671c48ca</Module>
       <Parameters />
       <OnPress>false</OnPress>
